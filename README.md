@@ -48,8 +48,8 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     + `undefined`
 
     ```javascript
-    var foo = 1,
-        bar = foo;
+    var foo = 1
+        ,bar = foo;
 
     bar = 9;
 
@@ -62,8 +62,8 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     + `function`
 
     ```javascript
-    var foo = [1, 2],
-        bar = foo;
+    var foo = [1, 2]
+        ,bar = foo;
 
     bar[0] = 9;
 
@@ -89,16 +89,16 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```javascript
     // schlecht
     var superman = {
-      class: 'superhero',
-      default: { clark: 'kent' },
-      private: true
+      class: 'superhero'
+      ,default: { clark: 'kent' }
+      ,private: true
     };
 
     // gut
     var superman = {
-      klass: 'superhero',
-      defaults: { clark: 'kent' },
-      hidden: true
+      klass: 'superhero'
+      ,defaults: { clark: 'kent' }
+      ,hidden: true
     };
     ```
     **[[⬆]](#TOC)**
@@ -131,9 +131,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Wenn du ein Array kopieren möchtest, benutze `Array#slice`. [jsPerf](http://jsperf.com/converting-arguments-to-an-array/7)
 
     ```javascript
-    var len = items.length,
-        itemsCopy = [],
-        i;
+    var len = items.length
+        ,itemsCopy = []
+        ,i;
 
     // schlecht
     for (i = 0; i < len; i++) {
@@ -193,19 +193,19 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Wenn man im Programmverlauf eine Zeichenkette dynamisch zusammensetzen muss, sollte man `Array#join` einer `string concatenation` vorziehen. Vorallem für den IE. [jsPerf](http://jsperf.com/string-vs-array-concat/2).
 
     ```javascript
-    var items,
-        messages,
-        length, i;
+    var items
+        ,messages
+        ,length, i;
 
     messages = [{
-        state: 'success',
-        message: 'This one worked.'
+        state: 'success'
+        ,message: 'This one worked.'
     },{
-        state: 'success',
-        message: 'This one worked as well.'
+        state: 'success'
+        ,message: 'This one worked as well.'
     },{
-        state: 'error',
-        message: 'This one did not work.'
+        state: 'error'
+        ,message: 'This one did not work.'
     }];
 
     length = messages.length;
@@ -300,8 +300,8 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
     ```javascript
     var luke = {
-      jedi: true,
-      age: 28
+      jedi: true
+      ,age: 28
     };
 
     // schlecht
@@ -315,8 +315,8 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
     ```javascript
     var luke = {
-      jedi: true,
-      age: 28
+      jedi: true
+      ,age: 28
     };
 
     function getProp(prop) {
@@ -350,31 +350,31 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     var dragonball = 'z';
 
     // gut
-    var items = getItems(),
-        goSportsTeam = true,
-        dragonball = 'z';
+    var items = getItems()
+        ,goSportsTeam = true
+        ,dragonball = 'z';
     ```
 
   - Deklariere Variablen ohne direkte Zuweisung immer als letztes. Dies ist vorallem hilfreich, wenn man später eine Variable anhand einer zuvor deklarierten Variable initialisieren möchte.
 
     ```javascript
     // schlecht
-    var i, len, dragonball,
-        items = getItems(),
-        goSportsTeam = true;
+    var i, len, dragonball
+        ,items = getItems()
+        ,goSportsTeam = true;
 
     // schlecht
-    var i, items = getItems(),
-        dragonball,
-        goSportsTeam = true,
-        len;
+    var i, items = getItems()
+        ,dragonball
+        ,goSportsTeam = true
+        ,len;
 
     // gut
-    var items = getItems(),
-        goSportsTeam = true,
-        dragonball,
-        i,
-        length;
+    var items = getItems()
+        ,goSportsTeam = true
+        ,dragonball
+        ,i
+        ,length;
     ```
 
   - Weise den Wert einer Variable, wenn möglich, immer am Anfang des Gültigkeitsbereichs zu. Dies hilft Problemen mit der Variablendeklaration vorzubeugen.
@@ -710,14 +710,14 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
     // schlecht
     dog.set('attr',{
-      age: '1 year',
-      breed: 'Bernese Mountain Dog'
+      age: '1 year'
+      ,breed: 'Bernese Mountain Dog'
     });
 
     // gut
     dog.set('attr', {
-      age: '1 year',
-      breed: 'Bernese Mountain Dog'
+      age: '1 year'
+      ,breed: 'Bernese Mountain Dog'
     });
     ```
   - Platziere eine Leerzeile an das Ende der Datei.
@@ -773,33 +773,33 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 ## <a name='leading-commas'>Führende Kommas</a>
 
-  - **Nein.**
+  - **Ja.**
 
     ```javascript
     // schlecht
-    var once
-      , upon
-      , aTime;
-
-    // gut
     var once,
         upon,
         aTime;
 
-    // schlecht
-    var hero = {
-        firstName: 'Bob'
-      , lastName: 'Parr'
-      , heroName: 'Mr. Incredible'
-      , superPower: 'strength'
-    };
-
     // gut
+    var once
+        ,upon
+        ,aTime;
+
+    // schlecht
     var hero = {
       firstName: 'Bob',
       lastName: 'Parr',
       heroName: 'Mr. Incredible',
       superPower: 'strength'
+    };
+
+    // gut
+    var hero = {
+        firstName: 'Bob'
+        ,lastName: 'Parr'
+        ,heroName: 'Mr. Incredible'
+        ,superPower: 'strength'
     };
     ```
 
@@ -819,12 +819,6 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
     // gut
     (function() {
-      var name = 'Skywalker';
-      return name;
-    })();
-
-    // gut
-    ;(function() {
       var name = 'Skywalker';
       return name;
     })();
@@ -1086,9 +1080,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     Jedi.prototype = {
       fight: function fight() {
         console.log('fighting');
-      },
+      }
 
-      block: function block() {
+      ,block: function block() {
         console.log('blocking');
       }
     };
