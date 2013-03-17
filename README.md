@@ -677,7 +677,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 ## <a name='whitespace'>Whitespace</a>
 
-  - Benutze weiche Tabulatoren (`soft tabs`) mit 2 Leerzeichen.
+  - Benutze Tabulatoren.
 
     ```javascript
     // schlecht
@@ -692,7 +692,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
     // gut
     function() {
-    ∙∙var name;
+    ⎯var name;
     }
     ```
   - Platziere ein Leerzeichen vor einer öffnenden Klammer.
