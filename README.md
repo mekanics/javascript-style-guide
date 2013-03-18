@@ -49,7 +49,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
     ```javascript
     var foo = 1
-        ,bar = foo;
+        , bar = foo;
 
     bar = 9;
 
@@ -63,7 +63,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
     ```javascript
     var foo = [1, 2]
-        ,bar = foo;
+        , bar = foo;
 
     bar[0] = 9;
 
@@ -90,15 +90,15 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     // schlecht
     var superman = {
       class: 'superhero'
-      ,default: { clark: 'kent' }
-      ,private: true
+      , default: { clark: 'kent' }
+      , private: true
     };
 
     // gut
     var superman = {
       klass: 'superhero'
-      ,defaults: { clark: 'kent' }
-      ,hidden: true
+      , defaults: { clark: 'kent' }
+      , hidden: true
     };
     ```
     **[[⬆]](#TOC)**
@@ -132,8 +132,8 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
     ```javascript
     var len = items.length
-        ,itemsCopy = []
-        ,i;
+        , itemsCopy = []
+        , i;
 
     // schlecht
     for (i = 0; i < len; i++) {
@@ -194,18 +194,18 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
     ```javascript
     var items
-        ,messages
-        ,length, i;
+        , messages
+        , length, i;
 
     messages = [{
         state: 'success'
-        ,message: 'This one worked.'
+        , message: 'This one worked.'
     },{
         state: 'success'
-        ,message: 'This one worked as well.'
+        , message: 'This one worked as well.'
     },{
         state: 'error'
-        ,message: 'This one did not work.'
+        , message: 'This one did not work.'
     }];
 
     length = messages.length;
@@ -301,7 +301,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```javascript
     var luke = {
       jedi: true
-      ,age: 28
+      , age: 28
     };
 
     // schlecht
@@ -316,7 +316,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```javascript
     var luke = {
       jedi: true
-      ,age: 28
+      , age: 28
     };
 
     function getProp(prop) {
@@ -351,8 +351,8 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
     // gut
     var items = getItems()
-        ,goSportsTeam = true
-        ,dragonball = 'z';
+        , goSportsTeam = true
+        , dragonball = 'z';
     ```
 
   - Deklariere Variablen ohne direkte Zuweisung immer als letztes. Dies ist vorallem hilfreich, wenn man später eine Variable anhand einer zuvor deklarierten Variable initialisieren möchte.
@@ -360,21 +360,21 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```javascript
     // schlecht
     var i, len, dragonball
-        ,items = getItems()
-        ,goSportsTeam = true;
+        , items = getItems()
+        , goSportsTeam = true;
 
     // schlecht
     var i, items = getItems()
-        ,dragonball
-        ,goSportsTeam = true
-        ,len;
+        , dragonball
+        , goSportsTeam = true
+        , len;
 
     // gut
     var items = getItems()
-        ,goSportsTeam = true
-        ,dragonball
-        ,i
-        ,length;
+        , goSportsTeam = true
+        , dragonball
+        , i
+        , length;
     ```
 
   - Weise den Wert einer Variable, wenn möglich, immer am Anfang des Gültigkeitsbereichs zu. Dies hilft Problemen mit der Variablendeklaration vorzubeugen.
@@ -711,13 +711,13 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     // schlecht
     dog.set('attr',{
       age: '1 year'
-      ,breed: 'Bernese Mountain Dog'
+      , breed: 'Bernese Mountain Dog'
     });
 
     // gut
     dog.set('attr', {
       age: '1 year'
-      ,breed: 'Bernese Mountain Dog'
+      , breed: 'Bernese Mountain Dog'
     });
     ```
   - Platziere eine Leerzeile an das Ende der Datei.
@@ -783,8 +783,8 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
     // gut
     var once
-        ,upon
-        ,aTime;
+        , upon
+        , aTime;
 
     // schlecht
     var hero = {
@@ -797,9 +797,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     // gut
     var hero = {
         firstName: 'Bob'
-        ,lastName: 'Parr'
-        ,heroName: 'Mr. Incredible'
-        ,superPower: 'strength'
+        , lastName: 'Parr'
+        , heroName: 'Mr. Incredible'
+        , superPower: 'strength'
     };
     ```
 
@@ -1082,7 +1082,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
         console.log('fighting');
       }
 
-      ,block: function block() {
+      , block: function block() {
         console.log('blocking');
       }
     };
